@@ -11,7 +11,7 @@ class Post(models.Model) :
         return self.title
     
 class Comment(models.Model):
-    comment = models.CharField(verbose_name="작성일", max_length=128)
+    comment = models.CharField(verbose_name="댓글", max_length=128)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
     def __str__(self):
